@@ -3,7 +3,7 @@ import './Header.css'
 
 function Header(props) {
     return (
-      <header>Stevie fresh</header>
+      <header>header</header>
     );
   }
 
