@@ -1,5 +1,6 @@
 import React from 'react';
 import './Navbar.css'
+import {  Link } from 'react-router-dom';
 
 function Navbar(props) {
     return (
@@ -12,20 +13,20 @@ function Navbar(props) {
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" ><Link to="/">Home </Link> <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Resume</a>
+        <a class="nav-link" ><Link to="/resume">Resume </Link></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Projects
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" >Action</a>
+          <a class="dropdown-item" >Another action</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" >Something else here</a>
         </div>
       </li>
     </ul>
