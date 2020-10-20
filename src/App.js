@@ -5,6 +5,7 @@ import './App.css';
 import Home from './components/home/Home';
 import Resume from './components/resume/Resume';
 import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 
@@ -13,19 +14,20 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <main>
-        <TransitionGroup>
-          <CSSTransition
-            key={location.key}
-            timeout={{ enter: 300, exit: 300 }}
-            classNames={'fade'}>
-              <Switch location={location}>
-                  <Route path="/" component={Home} exact />
-                  <Route path="/resume" component={Resume} />
-                  <Route component={Error} />
-              </Switch>
-          </CSSTransition>
-        </TransitionGroup>
+        <main>
+          <TransitionGroup>
+            <CSSTransition
+              key={location.key}
+              timeout={{ enter: 300, exit: 300 }}
+              classNames={'fade'}>
+                <Switch location={location}>
+                    <Route path="/" component={Home} exact />
+                    <Route path="/resume" component={Resume} />
+                    <Route component={Error} />
+                </Switch>
+            </CSSTransition>
+          </TransitionGroup>
+          <Footer />
         </main>
     </div>
   );

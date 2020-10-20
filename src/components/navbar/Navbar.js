@@ -1,42 +1,44 @@
-import React from 'react';
-import './Navbar.css'
-import {  Link } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import "./Navbar.css";
 
-function Navbar(props) {
-    return (
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <span class="navbar-brand mb-0 h1">Stephen Eisen</span>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" >
-    <span class="navbar-toggler-icon"></span>
-  </button>
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faCodepen, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" ><Link to={{pathname:'/'}}>Home </Link> <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" ><Link to={{pathname:'/resume'}}>Resume </Link></a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" >
-          Projects
+const links = [
+  {id: 1, name: 'Github', icon: faGithub, size: '3x', link: 'https://github.com/ISTEVIEYZ'},
+  {id: 3, name: 'LinkedIn', icon: faLinkedin, size: '3x', link: 'https://www.linkedin.com/in/stephen-eisen-13a856a6/'},
+];
+
+const Navbar = () => {
+
+  return (
+    <nav className="navbar">
+      <div className="nav-logo">
+        <a href="/">
+          <div className="logo-first">STEPHEN</div>
+          <div className="logo-last">EISEN</div>
         </a>
-        <div class="dropdown-menu" >
-          <a class="dropdown-item" >Action</a>
-          <a class="dropdown-item" >Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" >Something else here</a>
-        </div>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" ></input>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-    );
-  }
+      </div>
+      <ul className="site-links">
+        <li><NavLink exact to="/" className="project-link">PROJECTS</NavLink></li>
+        <li><NavLink to="/resume" className="docs-link">RESUME</NavLink></li>
+        <li><NavLink to="/blogs" className="blogs-link">BLOGS</NavLink></li>
+        <li><NavLink to="/about" className="about-link">ABOUT</NavLink></li>
+      </ul>
+      <ul className="social-links">
+        { links.map(link => {
+          return (
+            <li key={link.id}>
+              <a style={{color: "#20232A"}} href={link.link} target="__blank">
+                <FontAwesomeIcon  className="social-link" icon={link.icon} size={link.size}/>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+  );
+}
 
-  export default Navbar;
+export default Navbar;
