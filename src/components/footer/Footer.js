@@ -23,8 +23,8 @@ const Footer = () => {
           <div className="footer-section">
             <h2 className="footer-name" style={{ color: '#7B61F8' }}>SOCIAL</h2>
             <ul className="footer-links">
-              <li className="footer-link"><a href="https://github.com/abechoi" rel="noopener noreferrer" target="_blank">Github</a></li>
-              <li className="footer-link"><a href="https://linkedin.com/in/abrahamjchoi" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
+              <li className="footer-link"><a href="https://github.com/ISTEVIEYZ" rel="noopener noreferrer" target="_blank">Github</a></li>
+              <li className="footer-link"><a href="https://www.linkedin.com/in/stephen-eisen-13a856a6/" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
             </ul>
           </div>
 
