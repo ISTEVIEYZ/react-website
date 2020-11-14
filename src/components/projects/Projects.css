@@ -1,0 +1,27 @@
+.projects-grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    height: 100%;
+    justify-items: end;
+  }
+  .project-card{
+    margin: 30px;
+    width: 237px;
+    border: 1px solid #ddd;
+    display: block;
+    padding: 15px;
+    color: #20232A;
+    border: 1px #ddd solid;
+    border-radius: 5px;
+  }
+  .projects-thumbnail{
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  .projects-title{
+    margin: 15px 0 0 0;
+  }
+  .projects-card p{
+    margin: 0 0 15px 0;
+  }

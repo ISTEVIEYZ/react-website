@@ -4,6 +4,13 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faNode, faAws, faReact, faFontAwesome } from "@fortawesome/free-brands-svg-icons";
 
+const links = [
+  {id: 1, name: 'Node', icon: faNode, size: '3x', link: 'https://nodejs.org/en/'},
+  {id: 2, name: 'React', icon: faReact, size: '3x', link: 'https://reactjs.org/'},
+  {id: 3, name: 'Aws', icon: faAws, size: '3x', link: 'https://aws.amazon.com/'},
+  {id: 4, name: 'FontAwesome', icon: faFontAwesome, size: '3x', link: 'https://fontawesome.com/'},
+];
+
 const Footer = () => {
   return (
     <footer>
@@ -32,10 +39,15 @@ const Footer = () => {
         <div className="footer-content-right">
           <div className="footer-section">
             <p>Developed with:</p>
-              <FontAwesomeIcon className="tech-link" icon={faNode} size='3x'/>
-              <FontAwesomeIcon className="tech-link" icon={faReact} size='3x'/>
-              <FontAwesomeIcon className="tech-link" icon={faAws} size='3x'/>
-              <FontAwesomeIcon className="tech-link" icon={faFontAwesome} size='3x'/>
+            { links.map(link => {
+          return (
+            <li key={link.id}>
+              <a style={{color: "#20232A"}} href={link.link} target="__blank">
+                <FontAwesomeIcon  className="tech-link" icon={link.icon} size={link.size}/>
+              </a>
+            </li>
+          );
+        })}
           </div>
         </div>
 

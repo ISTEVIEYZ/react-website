@@ -1,0 +1,53 @@
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
+
+const ProjectDetails = ({project}) => {
+
+  const sections = project.sections;
+
+  const sectionIndex = (section) => {
+    return sections.indexOf(section) + 1;
+  }
+
+  return (
+    <section>
+      <div className="project-details">
+        
+        <h1 className="project-title">{project.title}</h1>
+        <div className="project-div" style={{ display: 'flex', marginTop: 10  }}>
+          <p className="date" style={{ marginTop: 5 }}>{project.createdAt}</p>
+
+          <a className="github-sm" href={ project.git } target="__blank">
+            <FontAwesomeIcon icon={faGithub} size="2x" style={{ width: 16, height: 16 }}/>
+            <div className="github-sm-text"><strong>View Repo</strong></div>
+          </a>
+
+        </div>
+
+        <div className="project-demo">
+        </div>
+        
+        <h3 className="table-header">Table of Contents</h3>
+  
+        <ol className="table-of-contents">
+          {sections.map(section => (
+            <li className="app-link" key={sectionIndex(section)}>
+              <Link  to={ project.url + "#section" + (sectionIndex(section)) }
+              scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'center' })}>{ section.title }</Link>
+            </li>
+          ))}
+        </ol>
+
+        { sections.map(section => (
+          <button title={section.title} key={sectionIndex(section)}
+          content={section.content} id={ "section" + (sectionIndex(section)) } />
+        ))}
+
+      </div>
+    </section>
+  )
+}
+
+export default ProjectDetails;

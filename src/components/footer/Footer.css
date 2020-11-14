@@ -30,6 +30,10 @@ footer{
   }
   .footer-section p{
     line-height: 4;
+    
+  }
+  li {
+    display: inline;
   }
   .footer-links{
     list-style-type: none;
