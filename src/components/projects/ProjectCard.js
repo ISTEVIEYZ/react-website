@@ -7,7 +7,8 @@ const ProjectCard = ({ project }) => {
   return (
     <Link to={ project.url }>
       <li className="project-card" key={project.id}>
-          <img className="projects-thumbnail" src={ require(project.thumbnail+"") } alt="projects-thumbnail"/>
+          {/* <img className="projects-thumbnail" src={ require(project.thumbnail+"") } alt="projects-thumbnail"/> */}
+          <img className="projects-thumbnail" src="./images/astar.png" alt="pp"/>
           <h1 className="projects-title">{ project.title }</h1>
 
           <div style={{ display: 'flex', marginTop: 5 }}>
