@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faCodepen, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const links = [
-  {id: 1, name: 'Github', icon: faGithub, size: '3x', link: 'https://github.com/ISTEVIEYZ'},
+  {id: 1, name: 'Github', icon: faGithub, size: '3x', link: 'https://github.com/StephenEisen'},
   {id: 2, name: 'LinkedIn', icon: faLinkedin, size: '3x', link: 'https://www.linkedin.com/in/stephen-eisen-13a856a6/'},
 ];
 
