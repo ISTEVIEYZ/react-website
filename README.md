@@ -1,3 +1,10 @@
+# ![](https://imgur.com/7Y7MFJ2.png) React Website
+
+## Preview
+<p align="center">
+<img src="https://imgur.com/7Y7MFJ2.png">
+</p>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
